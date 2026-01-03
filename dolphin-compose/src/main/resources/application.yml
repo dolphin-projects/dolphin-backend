@@ -8,7 +8,7 @@ spring:
     datasource:
         type: com.zaxxer.hikari.HikariDataSource
         driver-class-name: org.postgresql.Driver
-        url: jdbc:postgresql://110.42.60.129:10002/postgres?currentSchema=public&TimeZone=UTC
+        url: jdbc:postgresql://localhost:5432/postgres?currentSchema=public&TimeZone=UTC
         username: postgres
         password: postgres
     jackson:
