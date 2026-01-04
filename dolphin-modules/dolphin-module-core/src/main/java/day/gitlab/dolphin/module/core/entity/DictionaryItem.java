@@ -2,11 +2,10 @@ package day.gitlab.dolphin.module.core.entity;
 
 import com.mybatisflex.annotation.Table;
 import day.gitlab.dolphin.common.mybatis.entity.BaseStringTreeEntity;
+import day.gitlab.dolphin.module.core.api.vo.DictionaryItemVO;
+import io.github.linpeilie.annotations.AutoMapper;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
-
-import java.util.List;
-
 /**
  * 字典项 实体类。
  *
@@ -15,6 +14,7 @@ import java.util.List;
  */
 @Data
 @EqualsAndHashCode(callSuper = true)
+@AutoMapper(target = DictionaryItemVO.class)
 @Table("sys_core_dictionary_item")
 public class DictionaryItem extends BaseStringTreeEntity<DictionaryItem> {
 

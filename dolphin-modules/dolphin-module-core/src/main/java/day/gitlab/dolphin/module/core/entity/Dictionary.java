@@ -3,6 +3,8 @@ package day.gitlab.dolphin.module.core.entity;
 import com.mybatisflex.annotation.RelationOneToMany;
 import com.mybatisflex.annotation.Table;
 import day.gitlab.dolphin.common.mybatis.entity.BaseStringEntity;
+import day.gitlab.dolphin.module.core.api.vo.DictionaryVO;
+import io.github.linpeilie.annotations.AutoMapper;
 import lombok.*;
 
 import java.util.List;
@@ -17,6 +19,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(callSuper = true)
+@AutoMapper(target = DictionaryVO.class)
 @Table(value = "sys_core_dictionary", comment = "字典表")
 public class Dictionary extends BaseStringEntity {
 
