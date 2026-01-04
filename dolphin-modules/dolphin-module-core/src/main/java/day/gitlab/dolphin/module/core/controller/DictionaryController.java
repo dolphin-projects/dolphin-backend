@@ -1,6 +1,6 @@
 package day.gitlab.dolphin.module.core.controller;
 
-import day.gitlab.dolphin.common.business.api.vo.R;
+import day.gitlab.dolphin.common.business.api.R;
 import day.gitlab.dolphin.common.business.controller.BaseController;
 import day.gitlab.dolphin.module.core.api.dto.DictionaryInsertDTO;
 import day.gitlab.dolphin.module.core.service.DictionaryService;

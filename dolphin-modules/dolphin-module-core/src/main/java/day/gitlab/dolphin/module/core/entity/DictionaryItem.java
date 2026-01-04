@@ -1,9 +1,7 @@
 package day.gitlab.dolphin.module.core.entity;
 
-import com.mybatisflex.annotation.RelationOneToMany;
 import com.mybatisflex.annotation.Table;
-import day.gitlab.dolphin.common.business.entity.Entity;
-import day.gitlab.dolphin.common.business.entity.TreeEntity;
+import day.gitlab.dolphin.common.mybatis.entity.BaseStringTreeEntity;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
@@ -18,17 +16,12 @@ import java.util.List;
 @Data
 @EqualsAndHashCode(callSuper = true)
 @Table("sys_core_dictionary_item")
-public class DictionaryItem extends Entity<String> implements TreeEntity<DictionaryItem, String> {
+public class DictionaryItem extends BaseStringTreeEntity<DictionaryItem> {
 
     /**
      * 字典ID
      */
     private String masterId;
-
-    /**
-     * 父级主键
-     */
-    private String parentId;
 
     /**
      * 字典项名称
@@ -44,12 +37,4 @@ public class DictionaryItem extends Entity<String> implements TreeEntity<Diction
      * 字典项排序，升序排列
      */
     private Integer sort;
-
-    /**
-     * 字典项描述
-     */
-    private String description;
-
-    @RelationOneToMany(targetField = "parentId")
-    private List<DictionaryItem> children;
 }

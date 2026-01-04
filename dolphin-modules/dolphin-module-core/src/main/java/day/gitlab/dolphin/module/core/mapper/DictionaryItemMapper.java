@@ -1,6 +1,6 @@
 package day.gitlab.dolphin.module.core.mapper;
 
-import day.gitlab.dolphin.common.business.mapper.ITreeMapper;
+import day.gitlab.dolphin.common.mybatis.mapper.IBaseStringTreeMapper;
 import day.gitlab.dolphin.module.core.entity.DictionaryItem;
 import org.apache.ibatis.annotations.Mapper;
 
@@ -11,5 +11,5 @@ import org.apache.ibatis.annotations.Mapper;
  * @since 2026-01-01
  */
 @Mapper
-public interface DictionaryItemMapper extends ITreeMapper<DictionaryItem, String> {
+public interface DictionaryItemMapper extends IBaseStringTreeMapper<DictionaryItem> {
 }

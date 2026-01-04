@@ -2,7 +2,7 @@ package day.gitlab.dolphin.module.core.entity;
 
 import com.mybatisflex.annotation.RelationOneToMany;
 import com.mybatisflex.annotation.Table;
-import day.gitlab.dolphin.common.business.entity.Entity;
+import day.gitlab.dolphin.common.mybatis.entity.BaseStringEntity;
 import lombok.*;
 
 import java.util.List;
@@ -18,7 +18,7 @@ import java.util.List;
 @AllArgsConstructor
 @EqualsAndHashCode(callSuper = true)
 @Table(value = "sys_core_dictionary", comment = "字典表")
-public class Dictionary extends Entity<String> {
+public class Dictionary extends BaseStringEntity {
 
     /**
      * 字典名称
@@ -35,11 +35,6 @@ public class Dictionary extends Entity<String> {
      */
     private String type;
 
-    /**
-     * 字典描述
-     */
-    private String description;
-
-    @RelationOneToMany(targetField = "mainId")
+    @RelationOneToMany(targetField = "masterId")
     private List<DictionaryItem> items;
 }

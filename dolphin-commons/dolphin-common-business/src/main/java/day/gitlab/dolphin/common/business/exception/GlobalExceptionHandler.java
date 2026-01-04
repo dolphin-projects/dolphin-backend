@@ -1,6 +1,6 @@
 package day.gitlab.dolphin.common.business.exception;
 
-import day.gitlab.dolphin.common.business.api.vo.R;
+import day.gitlab.dolphin.common.business.api.R;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 

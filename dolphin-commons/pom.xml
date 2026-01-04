@@ -14,6 +14,7 @@
 
     <modules>
         <module>dolphin-common-core</module>
+        <module>dolphin-common-mybatis</module>
         <module>dolphin-common-business</module>
     </modules>
 </project>
