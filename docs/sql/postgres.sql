@@ -5,8 +5,8 @@ CREATE TABLE IF NOT EXISTS sys_core_dictionary (
     code                VARCHAR(200)                NOT NULL,
     type                VARCHAR(50)                 NOT NULL,
     description         TEXT,
-    create_time         TIMESTAMPTZ                 NOT NULL DEFAULT now(),
-    update_time         TIMESTAMPTZ                 NOT NULL DEFAULT now(),
+    create_time         TIMESTAMP                 NOT NULL DEFAULT now(),
+    update_time         TIMESTAMP                 NOT NULL DEFAULT now(),
     PRIMARY KEY (id)
 );
 COMMENT ON TABLE sys_core_dictionary IS '字典表';
@@ -26,8 +26,8 @@ CREATE TABLE IF NOT EXISTS sys_core_dictionary_item (
     code                VARCHAR(200)                NOT NULL,
     sort                INTEGER                     NOT NULL DEFAULT 0,
     description         TEXT,
-    create_time         TIMESTAMPTZ                 NOT NULL DEFAULT now(),
-    update_time         TIMESTAMPTZ                 NOT NULL DEFAULT now(),
+    create_time         TIMESTAMP                 NOT NULL DEFAULT now(),
+    update_time         TIMESTAMP                 NOT NULL DEFAULT now(),
     PRIMARY KEY (id)
 );
 COMMENT ON TABLE sys_core_dictionary_item IS '字典项表';
@@ -68,8 +68,8 @@ CREATE TABLE IF NOT EXISTS sys_core_sequence (
     min_value           BIGINT                      NOT NULL DEFAULT 0,
     inc_value           BIGINT                      NOT NULL DEFAULT 1,
     description         TEXT,
-    create_time         TIMESTAMPTZ                 NOT NULL DEFAULT now(),
-    update_time         TIMESTAMPTZ                 NOT NULL DEFAULT now(),
+    create_time         TIMESTAMP                 NOT NULL DEFAULT now(),
+    update_time         TIMESTAMP                 NOT NULL DEFAULT now(),
     PRIMARY KEY (id)
 );
 COMMENT ON TABLE sys_core_sequence IS '序列表';
@@ -110,8 +110,8 @@ CREATE TABLE IF NOT EXISTS sys_rbac_region (
     ext_code            VARCHAR(200),
     sort                INTEGER                     NOT NULL DEFAULT 0,
     description         TEXT,
-    create_time         TIMESTAMPTZ                 NOT NULL DEFAULT now(),
-    update_time         TIMESTAMPTZ                 NOT NULL DEFAULT now(),
+    create_time         TIMESTAMP                 NOT NULL DEFAULT now(),
+    update_time         TIMESTAMP                 NOT NULL DEFAULT now(),
     PRIMARY KEY (id)
 );
 COMMENT ON TABLE sys_rbac_region IS '区划项';
@@ -133,8 +133,8 @@ CREATE TABLE IF NOT EXISTS sys_rbac_department (
     code                VARCHAR(200)                NOT NULL,
     sort                INTEGER                     NOT NULL DEFAULT 0,
     description         TEXT,
-    create_time         TIMESTAMPTZ                 NOT NULL DEFAULT now(),
-    update_time         TIMESTAMPTZ                 NOT NULL DEFAULT now(),
+    create_time         TIMESTAMP                 NOT NULL DEFAULT now(),
+    update_time         TIMESTAMP                 NOT NULL DEFAULT now(),
     PRIMARY KEY (id)
 );
 COMMENT ON TABLE sys_rbac_department IS '部门表';
@@ -157,8 +157,8 @@ CREATE TABLE IF NOT EXISTS sys_rbac_role (
     code                VARCHAR(200)                NOT NULL,
     sort                INTEGER                     NOT NULL DEFAULT 0,
     description         TEXT,
-    create_time         TIMESTAMPTZ                 NOT NULL DEFAULT now(),
-    update_time         TIMESTAMPTZ                 NOT NULL DEFAULT now(),
+    create_time         TIMESTAMP                 NOT NULL DEFAULT now(),
+    update_time         TIMESTAMP                 NOT NULL DEFAULT now(),
     PRIMARY KEY (id)
 );
 COMMENT ON TABLE sys_rbac_role IS '角色表';
@@ -180,8 +180,8 @@ CREATE TABLE IF NOT EXISTS sys_rbac_user (
     password            VARCHAR(200)                NOT NULL,
     enabled             VARCHAR(2)                  NOT NULL DEFAULT '1',
     description         TEXT,
-    create_time         TIMESTAMPTZ                 NOT NULL DEFAULT now(),
-    update_time         TIMESTAMPTZ                 NOT NULL DEFAULT now(),
+    create_time         TIMESTAMP                 NOT NULL DEFAULT now(),
+    update_time         TIMESTAMP                 NOT NULL DEFAULT now(),
     PRIMARY KEY (id)
 );
 COMMENT ON TABLE sys_rbac_user IS '用户表';
