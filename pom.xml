@@ -5,7 +5,7 @@
 
     <groupId>day.gitlab</groupId>
 	<artifactId>dolphin-backend</artifactId>
-	<version>${project.version}</version>
+	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
     <name>dolphin-backend</name>
@@ -113,6 +113,7 @@
                         </annotationProcessorPaths>
                         <source>${java.version}</source>
                         <target>${java.version}</target>
+                        <encoding>UTF-8</encoding>
                     </configuration>
                 </plugin>
                 <plugin>
@@ -124,6 +125,9 @@
                             <goals>
                                 <goal>repackage</goal>
                             </goals>
+                            <configuration>
+                                <classifier>exec</classifier>
+                            </configuration>
                         </execution>
                     </executions>
                     <configuration>
